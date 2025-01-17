@@ -10,7 +10,7 @@ const sectionWrapper = ( Component) => {
             variants={staggerContainer()}
             initial="hidden"
             whileInView="show"
-            viewport={{once: false, amount: 0.5}}
+            viewport={{once: true, amount: 0.5}}
             className={`mx-auto relative z-0`}
             >
                 <Component/>

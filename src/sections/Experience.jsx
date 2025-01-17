@@ -57,7 +57,7 @@ const Experience = () => {
                                             <p className='group-hover:text-white transition ease-in-out duration-500'>
                                                 {title}
                                             </p>
-                                            <a href="mailto:anandrajpersonal150@gmail.com?subject=Hello Anand&body=I would like to work with you">
+                                            <a href="mailto:anandrajpersonal150@gmail.com?subject=Hello Anand&body=I would like to work with you" target='_blank'>
                                             <Button name="I'm Interested" isBeam containerClass='w-fit mt-10' />
                                             </a>
                                         </div>

@@ -12,7 +12,6 @@ const DemoComputer = (props) => {
     useEffect(() => {
         if (txt) {
             txt.flipY = false;
-
         }
     }, [txt])
 

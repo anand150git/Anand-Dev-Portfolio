@@ -44,8 +44,8 @@ const About = () => {
                     </motion.div>
                 </Tilt>
 
-                <Tilt className='col-span-1 xl:row-span-4 hover:z-10'>
-                    <motion.div variants={fadeIn("right", "spring", 1.5, 1)} className='grid-container'>
+                <Tilt className='col-span-1 xl:row-span-4 hover:z-10 grid-container'>
+                    <motion.div variants={fadeIn("right", "spring", 1.5, 1)}>
                         <div className='rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center'>
                             <Globes />
                         </div>
@@ -53,7 +53,7 @@ const About = () => {
                         <div>
                             <p className='grid-headtext'>I work remotely across most timezones.</p>
                             <p className='grid-subtext'>I'm based in Bihar India, with remote work available.</p>
-                            <a href="#contact">
+                            <a href="mailto:anandrajpersonal150@gmail.com?subject=Hello Anand&body=I would like to work with you">
                                 <Button name="Contact Me" isBeam containerClass='w-full mt-10' />
                             </a>
                         </div>
@@ -70,8 +70,8 @@ const About = () => {
                     </motion.div>
                 </Tilt>
 
-                <Tilt className='xl:col-span-1 xl:row-span-2 hover:z-10'>
-                    <motion.div variants={fadeIn("right", "spring", 2, 1)} className='grid-container'>
+                <Tilt className='xl:col-span-1 xl:row-span-2 hover:z-10 grid-container'>
+                    <motion.div variants={fadeIn("right", "spring", 2, 1)}>
                         <img src="assets/grid4.png" alt="grid-4" className='w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top' />
 
                         <div className='space-y-2'>
