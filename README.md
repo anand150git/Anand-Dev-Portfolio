@@ -1,7 +1,7 @@
 <div align="center">
   <br />
     <a href="https://anand-raj.vercel.app/" target="_blank">
-      <img src="https://github.com/user-attachments/assets/2afc2dc3-f840-4d98-9378-f34acd7df173" alt="Project Banner">
+      <img src="./public/assets/thumbnail.png" alt="Project Banner">
     </a>
   <br />
 
@@ -12,7 +12,7 @@
   </div>
 
   <h3 align="center">My Developer Portfolio</h3>
-  <a href="https://anand-raj.vercel.app/"><h2>anand-raj</h2></a>
+  <a href="https://anand-raj.vercel.app/" target="_blank"><h2>anand-raj</h2></a>
 </div>
 
 ## 📋 <a name="table">Table of Contents</a>
