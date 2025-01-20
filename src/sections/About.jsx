@@ -47,13 +47,13 @@ const About = () => {
                     </motion.div>
                 </Tilt>
 
-                <Tilt className='col-span-1 xl:row-span-4 hover:z-10 grid-container'>
+                <Tilt className='col-span-1 xl:row-span-4 hover:z-10 grid-container relative'>
                     <motion.div variants={isMobile ? "" : fadeIn("right", "spring", 1, 1)}>
-                        <div className='rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center'>
+                        <div className='rounded-3xl absolute md:top-[-50px] w-full inset-0 h-fit flex justify-center items-center'>
                             <Globes />
                         </div>
 
-                        <div>
+                        <div className='z-20 sm:mt-[350px] mt-[280px]'>
                             <p className='grid-headtext'>I work remotely across most timezones.</p>
                             <p className='grid-subtext'>I'm based in Bihar India, with remote work available.</p>
                             <a href="mailto:anandrajpersonal150@gmail.com?subject=Hello Anand&body=I would like to work with you">
