@@ -6,8 +6,8 @@ import CanvasLoader from '../components/CanvasLoader'
 import DemoComputer from '../components/DemoComputer'
 import { motion } from 'framer-motion'
 import { fadeIn, textVariant } from '../utils/motion'
-import { Tilt } from 'react-tilt'
 import { sectionWrapper } from '../hoc'
+import Button from '../components/Button'
 
 const projectCount = myProjects.length
 
@@ -30,7 +30,6 @@ const Projects = () => {
     return (
         <section className="c-space my-20">
             <motion.p variants={textVariant()} className="head-text">My Selected Work</motion.p>
-
             <div className="grid lg:grid-cols-2 grid-cols-1 mt-12 gap-5 w-full">
                 <div className="flex flex-col gap-5 relative sm:p-10 py-10 px-5 h-[650px] shadow-2xl shadow-black-200">
                     <div className="absolute top-0 right-0">
@@ -51,8 +50,8 @@ const Projects = () => {
                     <motion.div variants={textVariant()} className="flex items-center justify-between flex-wrap gap-5">
                         <div className="flex items-start gap-5">
                             {currentProject.tags.map((tag, index) => (
-                                <div className='w-10 leading-none text-center'>
-                                    <div key={index} className="tech-logo">
+                                <div key={index} className='w-10 leading-none text-center'>
+                                    <div className="tech-logo">
                                         <img src={tag.path} alt={tag.name} />
                                     </div>
                                     <span className='text-white text-[10px]'>{tag.name}</span>
@@ -104,6 +103,10 @@ const Projects = () => {
                     </Canvas>
                 </div>
             </div>
+
+            {/* <a href="/project">
+                <Button name='See All Projects' containerClass='w-1/2 mt-10 text-xl hover:bg-black-500 transition-all ease-in-out duration-300' />
+            </a> */}
         </section>
     )
 }

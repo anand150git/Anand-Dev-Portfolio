@@ -78,17 +78,17 @@ export const myProjects = [
                 path: '/assets/nextjs.png',
             },
             {
-                id: 3,
+                id: 2,
                 name: 'TypeScript',
                 path: '/assets/typescript.png',
             },
             {
-                id: 4,
+                id: 3,
                 name: 'ShadCN UI',
                 path: '/assets/shadcn.png',
             },
             {
-                id: 2,
+                id: 4,
                 name: 'Tailwind CSS',
                 path: 'assets/tailwindcss.png',
             },
@@ -110,17 +110,17 @@ export const myProjects = [
         spotlight: '/assets/spotlight2.png',
         tags: [
             {
-                id: 3,
+                id: 1,
                 name: 'JavaScript',
                 path: '/assets/javascript.png',
             },
             {
-                id: 1,
+                id: 2,
                 name: 'React.js',
                 path: '/assets/react.svg',
             },
             {
-                id: 2,
+                id: 3,
                 name: 'Tailwind CSS',
                 path: 'assets/tailwindcss.png',
             },
@@ -130,7 +130,7 @@ export const myProjects = [
                 path: '/assets/threejs.png',
             },
             {
-                id: 4,
+                id: 5,
                 name: 'Framer Motion',
                 path: '/assets/framer.png',
             },

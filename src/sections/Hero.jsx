@@ -32,44 +32,6 @@ const Hero = () => {
             typed.destroy();
         };
     }, []);
-
-    // const x = useControls('HackerRoom', {
-    //     positionX: {
-    //         value: 2.5,
-    //         min: -10,
-    //         max: 10,
-    //     },
-    //     positionY: {
-    //         value: 3.1,
-    //         min: -10,
-    //         max: 10,
-    //     },
-    //     positionZ: {
-    //         value: -4.5,
-    //         min: -10,
-    //         max: 10,
-    //     },
-    //     rotationX: {
-    //         value: 3.7,
-    //         min: -10,
-    //         max: 10,
-    //     },
-    //     rotationY: {
-    //         value: -0.1,
-    //         min: -10,
-    //         max: 10,
-    //     },
-    //     rotationZ: {
-    //         value: 3.15,
-    //         min: -10,
-    //         max: 10,
-    //     },
-    //     scale: {
-    //         value: 0,
-    //         min: 0.1,
-    //         max: 10
-    //     }
-    // })
     const isSmall = useMediaQuery({ maxWidth: 440 })
     const isMobile = useMediaQuery({ maxWidth: 768 })
     const isTablet = useMediaQuery({ maxWidth: 1024 })

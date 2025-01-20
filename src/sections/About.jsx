@@ -5,9 +5,12 @@ import { motion } from 'framer-motion'
 import { fadeIn, textVariant } from '../utils/motion'
 import { Tilt } from 'react-tilt'
 import { sectionWrapper } from '../hoc'
+import { useMediaQuery } from 'react-responsive'
 
 const About = () => {
     const [hasCopied, setHasCopied] = useState(false)
+    
+    const isMobile = useMediaQuery({ maxWidth: 768 })
 
     const handleCopy = () => {
         navigator.clipboard.writeText('anandrajpersonal150@gmail.com')
@@ -23,7 +26,7 @@ const About = () => {
             <div className='grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full'>
 
                 <Tilt className='col-span-1 xl:row-span-3 hover:z-10 grid-container'>
-                    <motion.div variants={fadeIn("right", "spring", 0.5, 1)} >
+                    <motion.div variants={isMobile ? "" : fadeIn("right", "spring", 1, 1)} >
                         <img src="/assets/grid1.png" alt="grid-1" className='w-full sm:h[276px] h-fit object-contain' />
                         <div>
                             <p className='grid-headtext'>Hi, I'm Anand</p>
@@ -35,7 +38,7 @@ const About = () => {
                 </Tilt>
 
                 <Tilt className='col-span-1 xl:row-span-3 hover:z-10 grid-container'>
-                    <motion.div variants={fadeIn("right", "spring", 1, 1)}>
+                    <motion.div variants={isMobile ? "" : fadeIn("right", "spring", 1, 1)}>
                         <img src="/assets/grid2.png" alt="grid-2" className='w-full sm:h-[276px] h-fit object-contain' />
                         <div>
                             <p className='grid-headtext'>Tech Stack</p>
@@ -45,7 +48,7 @@ const About = () => {
                 </Tilt>
 
                 <Tilt className='col-span-1 xl:row-span-4 hover:z-10 grid-container'>
-                    <motion.div variants={fadeIn("right", "spring", 1.5, 1)}>
+                    <motion.div variants={isMobile ? "" : fadeIn("right", "spring", 1, 1)}>
                         <div className='rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center'>
                             <Globes />
                         </div>
@@ -61,7 +64,7 @@ const About = () => {
                 </Tilt>
 
                 <Tilt className='xl:col-span-2 xl:row-span-3 hover:z-10 grid-container' options={{ max: 45, scale: 1, speed: 450, transition: true }}>
-                    <motion.div variants={fadeIn("right", "spring", 2, 1)} >
+                    <motion.div variants={isMobile ? "" : fadeIn("right", "spring", 1, 1)} >
                         <img src="/assets/grid3.png" alt="grid-3" className='w-full sm:h-[266px] h-fit object-contain ' />
                         <div>
                             <p className='grid-headtext'>My Passion for Coding</p>
@@ -71,7 +74,7 @@ const About = () => {
                 </Tilt>
 
                 <Tilt className='xl:col-span-1 xl:row-span-2 hover:z-10 grid-container'>
-                    <motion.div variants={fadeIn("right", "spring", 2, 1)}>
+                    <motion.div variants={isMobile ? "" : fadeIn("right", "spring", 1, 1)}>
                         <img src="assets/grid4.png" alt="grid-4" className='w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top' />
 
                         <div className='space-y-2'>

@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { navLinks } from '../constants'
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
 
   const NavItems = () => {
     return (
@@ -22,9 +22,9 @@ const Navbar = () => {
   return (
     <header className='text-white fixed top-0 left-0 right-0 z-50 bg-black/70'>
       <div className='max-w-7xl mx-auto'>
-        <div className='flex justify-between items-center py-5 mx-auto c-space'>
-          <a href="/" className='text-neutral-400 font-bold text-xl flex gap-2 justify-center items-center'>
-          <img src="icon.png" alt="logo" className='rounded-full w-10 h-10' />
+        <div className='flex justify-between items-center py-3 mx-auto c-space'>
+          <a href="/" className='text-neutral-400 font-bold text-xl flex gap-3 justify-center items-center'>
+          <img src="icon.png" alt="logo" className='rounded-full w-12 h-12' />
             <span className=' hover:text-white transition-colors'>Anand</span>
           </a>
 
