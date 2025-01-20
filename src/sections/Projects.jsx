@@ -8,10 +8,12 @@ import { motion } from 'framer-motion'
 import { fadeIn, textVariant } from '../utils/motion'
 import { sectionWrapper } from '../hoc'
 import Button from '../components/Button'
+import { useMediaQuery } from 'react-responsive'
 
 const projectCount = myProjects.length
 
 const Projects = () => {
+    const isMobile = useMediaQuery({ maxWidth: 768 })
     const [selectedProjectIndex, setSelectedProjectIndex] = useState(0)
     const [hoverToZoom, setHoverToZoom] = useState(false)
 
@@ -98,7 +100,7 @@ const Projects = () => {
                             </Suspense>
                         </Center>
 
-                        <OrbitControls maxPolarAngle={Math.PI / 2} enableZoom={false}
+                        <OrbitControls enabled={!isMobile} maxPolarAngle={Math.PI / 2} enableZoom={false}
                         />
                     </Canvas>
                 </div>
