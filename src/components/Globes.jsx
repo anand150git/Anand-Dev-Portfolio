@@ -1,38 +1,23 @@
 import Globe from 'react-globe.gl';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { useMediaQuery } from 'react-responsive';
 
 const Globes = () => {
-    const isMobile = useMediaQuery({ maxWidth: 768 })
-
+    const isSmall = useMediaQuery({ maxWidth: 440 })
+    const isMobile = useMediaQuery({ maxWidth: 768 });
     const globeEl = useRef();
 
     useEffect(() => {
         const globe = globeEl.current;
 
-        // Disable OrbitControls interactions
+        // Disable OrbitControls interactions for mobile
         const controls = globe.controls();
-        controls.enabled = isMobile ? false : true; // Completely disable controls
-        // Alternatively, disable specific interactions:
-        //  controls.enableZoom = isMobile ? false : true;
-        // controls.enableRotate = false;
-        //  controls.enablePan = isMobile ? false : true;
-        //  controls.minPolarAngle = false;
-        //  controls.maxPolarAngle = false;
+        controls.enabled = !isMobile; // Completely disable controls on mobile
 
         // Auto-rotate
         globe.controls().autoRotate = true;
         globe.controls().autoRotateSpeed = 0.4;
-        
-
-        // Set initial rotation
-        globe.scene().children.forEach((child) => {
-            if (child.geometry?.type === 'SphereGeometry') {
-                child.rotation.set(0, 0, 10); // Apply the rotation [x, y, z]
-            }
-        });
-
 
         // Add clouds sphere
         const CLOUDS_IMG_URL = './assets/clouds.png'; // from https://github.com/turban/webgl-earth
@@ -51,12 +36,15 @@ const Globes = () => {
                 requestAnimationFrame(rotateClouds);
             })();
         });
-    }, []);
+    }, [isMobile]);
+
+    // Set the globe size based on the screen width
+    const globeSize = isSmall ? 300 : isMobile ? 350 : 480; // Smaller size on mobile for better responsiveness
+
     return (
         <Globe
-            height={480}
-
-            width={480}
+            height={globeSize}
+            width={globeSize}
             backgroundColor="rgba(0,0,0,0)"
             ref={globeEl}
             animateIn={false}
@@ -69,7 +57,7 @@ const Globes = () => {
                 size: 50,
             }]}
         />
-    )
-}
+    );
+};
 
-export default Globes
+export default Globes;
